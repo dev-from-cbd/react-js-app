@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ListItems from "./ListItems.js";
 
 import { render } from "react-dom";
 
@@ -59,6 +60,8 @@ class App extends React.Component {
             <button type="submit">Add</button>
           </form>
         </header>
+
+        <ListItems item={this.state.items}></ListItems>
       </div>
     );
   }
