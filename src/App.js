@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import ListItems from "./ListItems.js";
+import ListItems from "./ListItems";
 
-import { render } from "react-dom";
+//import { render } from "react-dom";
 
 class App extends React.Component {
   constructor(props) {
@@ -53,15 +53,15 @@ class App extends React.Component {
           <form id="to-do-form" onSubmit={this.addItem}>
             <input
               type="text"
-              placeholder="Enter any task"
+              placeholder="Enter any your task"
               value={this.state.currentItem.text}
               onChange={this.handleInput}
             />
             <button type="submit">Add</button>
           </form>
-        </header>
 
-        <ListItems item={this.state.items}></ListItems>
+          <ListItems items={this.state.items} />
+        </header>
       </div>
     );
   }
